@@ -1,0 +1,724 @@
+# FRONTEND DEVELOPMENT RULES & RESPONSIVE DESIGN STANDARDS
+
+## CORE PRINCIPLES
+
+1. Always use Mobile-First Development.
+2. Every component must be responsive.
+3. Parent container controls child behavior.
+4. Never use fixed widths unless absolutely necessary.
+5. Prefer:
+
+   * Flexbox
+   * CSS Grid
+   * Relative units (%, rem, em, vw, vh)
+   * max-width over fixed width
+6. Prevent horizontal scrolling on all devices.
+7. Design for real devices, not only breakpoints.
+8. Maintain consistent spacing throughout the application.
+9. Ensure accessibility on all screen sizes.
+10. Optimize for performance and readability.
+
+---
+
+## RESPONSIVE BREAKPOINTS
+
+### Mobile
+
+320px - 374px
+Small Mobile
+
+375px - 429px
+Standard Mobile
+
+430px - 639px
+Large Mobile
+
+### Tablet
+
+640px - 767px
+Small Tablet
+
+768px - 834px
+Standard Tablet
+
+835px - 1023px
+Large Tablet
+
+### Laptop
+
+1024px - 1279px
+11" - 13" Laptop
+
+1280px - 1439px
+14" Laptop
+
+1440px - 1679px
+15" - 16" Laptop
+
+1680px - 1919px
+17" - 18" Laptop
+
+### Desktop
+
+1920px - 2559px
+Full HD / QHD
+
+2560px - 3839px
+Ultra-Wide
+
+3840px+
+4K Displays
+
+---
+
+## PARENT-FIRST RESPONSIVENESS RULE
+
+Every component must adapt according to the parent container.
+
+Hierarchy:
+
+Parent Container
+↓
+Grid/Layout
+↓
+Card Width
+↓
+Image Width
+↓
+Content Width
+↓
+Typography
+↓
+Icons
+
+Never resize child components before evaluating the parent container.
+
+When screen size decreases:
+
+1. Reduce container width
+2. Reduce padding
+3. Reduce margins
+4. Reduce gaps
+5. Reorganize layout
+6. Reduce image size
+7. Reduce icon size
+8. Reduce text size
+
+Never reduce typography first.
+
+---
+
+## CONTAINER WIDTH RULES
+
+Mobile:
+Width: 100%
+Padding: 16px
+
+Tablet:
+Width: 100%
+Padding: 24px
+
+Laptop:
+Max Width: 1280px
+Padding: 32px
+
+Desktop:
+Max Width: 1440px
+Padding: 40px
+
+Large Desktop:
+Max Width: 1600px
+Padding: 48px
+
+---
+
+## SPACING SYSTEM
+
+Allowed Spacing Scale:
+
+4px
+8px
+12px
+16px
+20px
+24px
+32px
+40px
+48px
+64px
+80px
+96px
+
+Avoid random spacing values.
+
+---
+
+## SECTION SPACING
+
+Mobile:
+40px - 48px
+
+Tablet:
+60px - 72px
+
+Laptop:
+80px
+
+Desktop:
+96px
+
+Large Desktop:
+120px
+
+---
+
+## COMPONENT PADDING
+
+### Cards
+
+Mobile:
+12px
+
+Tablet:
+16px
+
+Laptop:
+20px
+
+Desktop:
+24px
+
+### Forms
+
+Mobile:
+16px
+
+Tablet:
+20px
+
+Desktop:
+24px
+
+### Modals
+
+Mobile:
+16px
+
+Tablet:
+24px
+
+Desktop:
+32px
+
+---
+
+## GRID SYSTEM
+
+### Cards Per Row
+
+Mobile:
+1 Card
+
+Small Tablet:
+2 Cards
+
+Tablet:
+2-3 Cards
+
+Laptop:
+3 Cards
+
+Large Laptop:
+4 Cards
+
+Desktop:
+4-5 Cards
+
+Large Desktop:
+5-6 Cards
+
+Never exceed 6 cards per row.
+
+---
+
+## CARD RULES
+
+1. Equal heights whenever possible.
+2. Consistent padding.
+3. Consistent spacing.
+4. No content overflow.
+5. Responsive images.
+6. Cards must fill available width.
+
+Card Gap:
+
+Mobile:
+12px
+
+Tablet:
+16px
+
+Laptop:
+20px
+
+Desktop:
+24px
+
+---
+
+## VIEW MORE RULE
+
+Repeated Components:
+
+* Product Cards
+* Service Cards
+* Team Members
+* Blogs
+* Testimonials
+* Categories
+* Projects
+* Portfolios
+
+Rules:
+
+1-6 Items:
+Display all.
+
+7-8 Items:
+Display first 6.
+Show View More button.
+
+9-20 Items:
+Display first 6.
+Expand on demand.
+
+20+ Items:
+Use Pagination,
+Lazy Loading,
+Infinite Scroll,
+or Virtualization.
+
+Never render large lists unnecessarily.
+
+---
+
+## TYPOGRAPHY RULES
+
+### H1
+
+Mobile:
+28px
+
+Tablet:
+36px
+
+Laptop:
+42px
+
+Desktop:
+48px
+
+Large Desktop:
+56px
+
+### H2
+
+Mobile:
+24px
+
+Tablet:
+30px
+
+Laptop:
+36px
+
+Desktop:
+42px
+
+### H3
+
+Mobile:
+20px
+
+Tablet:
+24px
+
+Laptop:
+28px
+
+Desktop:
+32px
+
+### Body Text
+
+Mobile:
+14px-16px
+
+Tablet:
+16px
+
+Desktop:
+16px-18px
+
+### Line Height
+
+1.4 - 1.8
+
+### Text Rules
+
+* No overflow
+* Proper wrapping
+* Readable contrast
+* Consistent hierarchy
+
+Minimum readable text:
+14px
+
+---
+
+## ICON RULES
+
+### Small Icons
+
+Mobile:
+16px
+
+Tablet:
+18px
+
+Desktop:
+20px
+
+### Standard Icons
+
+Mobile:
+20px
+
+Tablet:
+24px
+
+Desktop:
+24px-28px
+
+### Large Icons
+
+Mobile:
+28px
+
+Tablet:
+32px
+
+Desktop:
+40px
+
+### Rules
+
+* Icons must align with text baseline.
+* Maintain consistent icon spacing.
+* Use same icon size within similar components.
+* Prevent icon distortion.
+
+---
+
+## IMAGE RULES
+
+Images must:
+
+* Be responsive
+* Use max-width: 100%
+* Maintain aspect ratio
+* Use object-fit when needed
+
+Hero Image Heights:
+
+Mobile:
+250px - 350px
+
+Tablet:
+400px - 500px
+
+Laptop:
+550px - 650px
+
+Desktop:
+650px - 800px
+
+---
+
+## BUTTON RULES
+
+Minimum Touch Area:
+
+44px × 44px
+
+Button Height:
+
+Mobile:
+44px
+
+Tablet:
+48px
+
+Desktop:
+52px
+
+Button Padding:
+
+Mobile:
+12px 16px
+
+Tablet:
+14px 20px
+
+Desktop:
+16px 24px
+
+Rules:
+
+* Maintain visual hierarchy.
+* Full width on mobile when appropriate.
+* Auto width on desktop.
+* Consistent border radius.
+
+---
+
+## FORM RULES
+
+Mobile:
+
+Single Column Layout
+
+Tablet:
+
+Single or Double Column
+
+Desktop:
+
+Multi-Column Allowed
+
+Input Height:
+
+Minimum 44px
+
+Gap Between Fields:
+
+16px - 24px
+
+---
+
+## NAVIGATION RULES
+
+### Mobile
+
+Display:
+
+Logo
+Hamburger Menu
+Primary CTA
+
+Hide:
+
+Complex Navigation
+
+Use:
+
+Drawer
+Slide Menu
+Overlay Menu
+
+### Tablet
+
+Logo
+Essential Navigation
+Optional Hamburger
+CTA
+
+### Desktop
+
+Full Navigation
+Dropdown Menus
+CTA Buttons
+
+No Hamburger Menu
+
+---
+
+## ALIGNMENT RULES
+
+### Horizontal Alignment
+
+Use:
+
+Left Alignment
+Center Alignment
+Grid Alignment
+
+Avoid:
+
+Random Positioning
+
+### Vertical Alignment
+
+Use:
+
+align-items: center
+
+for:
+
+Buttons
+Cards
+Navigation
+Icon/Text Combinations
+
+### Content Alignment
+
+Text blocks:
+Left aligned
+
+Actions:
+Right aligned where appropriate
+
+Centered content only when intentional.
+
+---
+
+## RESPONSIVE ADAPTATION FLOW
+
+Desktop → Laptop → Tablet → Mobile
+
+Transform:
+
+6 Columns → 4 → 3 → 2 → 1
+
+Horizontal Layout
+→ Vertical Layout
+
+Sidebar
+→ Drawer
+
+Navbar
+→ Hamburger
+
+Large Media
+→ Optimized Media
+
+Complex UI
+→ Simplified UI
+
+---
+
+## OVERFLOW PREVENTION RULES
+
+Always check:
+
+* Text Overflow
+* Card Overflow
+* Table Overflow
+* Modal Overflow
+* Image Overflow
+* Sidebar Overflow
+
+Prevent:
+
+Horizontal Scrolling
+
+Use:
+
+word-wrap
+overflow-wrap
+responsive widths
+
+---
+
+## ACCESSIBILITY RULES
+
+Minimum Touch Target:
+44px × 44px
+
+Keyboard Navigation:
+Required
+
+Visible Focus States:
+Required
+
+Alt Text:
+Required
+
+Color Contrast:
+WCAG Compliant
+
+Interactive Elements:
+Clearly Identifiable
+
+---
+
+## PERFORMANCE RULES
+
+1. Lazy load images.
+2. Optimize assets.
+3. Avoid excessive DOM nesting.
+4. Use virtualization for large lists.
+5. Avoid unnecessary re-renders.
+6. Use responsive image sizes.
+7. Minimize layout shifts.
+8. Use skeleton loaders where appropriate.
+
+---
+
+## FINAL QA CHECKLIST
+
+Verify:
+
+✓ 320px
+
+✓ 375px
+
+✓ 430px
+
+✓ 640px
+
+✓ 768px
+
+✓ 820px
+
+✓ 1024px
+
+✓ 1280px
+
+✓ 1440px
+
+✓ 1680px
+
+✓ 1920px
+
+✓ 2560px
+
+✓ No Horizontal Scroll
+
+✓ Proper Alignment
+
+✓ Consistent Padding
+
+✓ Consistent Margins
+
+✓ Responsive Typography
+
+✓ Responsive Icons
+
+✓ Responsive Images
+
+✓ Responsive Forms
+
+✓ Responsive Cards
+
+✓ Working Hamburger Menu
+
+✓ Parent-First Scaling
+
+✓ View More Logic
+
+✓ Accessibility Compliance
+
+✓ Performance Optimization
+
+A frontend task is considered complete only when all checklist items pass successfully.

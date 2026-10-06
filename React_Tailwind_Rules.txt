@@ -1,0 +1,221 @@
+
+PRODUCTION REACT + TAILWIND FRONTEND RULES
+
+1. ARCHITECTURE
+- Mobile-first development.
+- Parent-first responsiveness.
+- Single Responsibility Principle for components.
+- Feature-based architecture preferred.
+- Reuse before creating new components.
+
+2. FOLDER STRUCTURE
+
+src/
+├── app/
+├── assets/
+├── components/
+│   ├── ui/
+│   ├── forms/
+│   ├── cards/
+│   ├── modals/
+│   ├── tables/
+│   └── navigation/
+├── features/
+├── hooks/
+├── services/
+├── validations/
+├── utils/
+├── constants/
+├── layouts/
+├── pages/
+├── context/
+├── types/
+├── App.jsx
+└── main.jsx
+
+3. RESPONSIVE RULES
+- Mobile: 320-639px
+- Tablet: 640-1023px
+- Laptop: 1024-1919px
+- Desktop: 1920px+
+- 1 card on mobile.
+- 2-3 cards on tablets.
+- 3-4 cards on laptops.
+- 4-6 cards on desktops.
+- Never exceed 6 cards per row.
+- Use View More when items exceed 6.
+
+4. SPACING SYSTEM
+Allowed scale:
+4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96
+
+5. TYPOGRAPHY
+- Minimum text: 14px
+- Body: 14-18px
+- Responsive typography preferred.
+- Prevent text overflow.
+
+6. COMPONENT RULES
+Every component must support:
+- Loading State
+- Error State
+- Empty State
+- Success State
+- Responsive State
+
+7. REUSABILITY RULES
+Before creating:
+- Check existing component.
+- Check existing hook.
+- Check existing utility.
+- Check existing service.
+
+8. API RULES
+- No direct API calls inside UI.
+- Use services layer.
+- Handle:
+  Loading
+  Success
+  Error
+  Empty
+  Offline
+  Unauthorized
+
+9. FORM VALIDATION
+Required:
+- Client validation
+- Server validation
+
+Validate:
+- Email
+- Password
+- Phone
+- URL
+- Required fields
+
+10. ERROR UI RULES
+Show:
+- Clear title
+- Clear description
+- Retry action
+
+Never display raw backend errors.
+
+11. SEARCH & FILTERING
+Implement:
+- Search
+- Sort
+- Filter
+- Reset
+
+Use debounce:
+300-500ms
+
+12. LARGE DATASETS
+- >20 items: Pagination
+- >100 items: Virtualization or server pagination
+
+13. TABLE RULES
+Desktop:
+- Data table
+
+Mobile:
+- Cards or accordion
+
+14. CUSTOM HOOK RULES
+Allowed:
+- useAuth
+- useProducts
+- useUsers
+- usePagination
+- useDebounce
+
+Hooks must have one responsibility.
+
+15. STATE MANAGEMENT
+Local:
+- useState
+
+Shared:
+- Context
+
+Large apps:
+- Redux Toolkit
+- Zustand
+
+16. TAILWIND RULES
+Avoid:
+- w-[387px]
+- mt-[37px]
+
+Prefer:
+- max-w-*
+- w-full
+- spacing scale
+
+17. ACCESSIBILITY
+Required:
+- aria-label
+- labels
+- keyboard navigation
+- focus states
+- alt text
+
+Minimum touch target:
+44x44
+
+18. PERFORMANCE
+Use:
+- Lazy loading
+- Code splitting
+- React.memo
+- useMemo
+- useCallback
+
+19. CLEAN CODE RULES
+Remove:
+- Unused imports
+- Unused variables
+- Unused hooks
+- Unused functions
+- Unused states
+- Dead components
+- Dead CSS
+
+Zero warnings policy.
+
+20. SECURITY
+- Never trust frontend validation.
+- Sanitize user input.
+- No secrets in frontend.
+- No sensitive keys in source code.
+
+21. FINAL QA CHECKLIST
+✓ Responsive
+✓ Accessible
+✓ Loading State
+✓ Error State
+✓ Empty State
+✓ Validation
+✓ Search
+✓ Filter
+✓ Sort
+✓ Pagination
+✓ No Console Errors
+✓ No Dead Code
+✓ No Unused Imports
+✓ Performance Optimized
+✓ Production Ready
+
+MANDATORY AI RULE:
+Before generating any React code:
+1. Reuse existing components.
+2. Reuse existing hooks.
+3. Reuse existing utilities.
+4. Avoid duplication.
+5. Remove dead code.
+6. Implement loading/error/empty states.
+7. Make fully responsive.
+8. Validate all forms.
+9. Ensure accessibility.
+10. Follow production standards.
